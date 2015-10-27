@@ -1,0 +1,64 @@
+
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<VBox>
+	<VBox>
+		<HBox>
+			<Label text="Estimated KPI"></Label>
+		</HBox>
+		<HBox width="480px">
+			<viz:VizFrame id="idVizFramePie" uiConfig="{applicationSet:'fiori'}" vizType="pie" height="300px" width="240px"></viz:VizFrame>
+			<viz:VizFrame id="idVizFrameColumn" uiConfig="{applicationSet:'fiori'}" vizType="column" height="300px" width="240px"></viz:VizFrame>
+		</HBox>
+
+	</VBox>
+	<VBox class="sapUiSizeCompact">
+		<HBox>
+			<Label text="Goal Setting"></Label>
+		</HBox>
+		<VBox>
+			<RadioButton text="radio button"></RadioButton>
+			<RadioButton text="radio button"></RadioButton>
+			<RadioButton text="radio button"></RadioButton>
+		</VBox>
+	</VBox>
+
+	<VBox>
+		<HBox alignItems="Start" justifyContent="SpaceBetween">
+			<Label text="Constraints"></Label>
+			<core:Icon src="sap-icon://action-settings"></core:Icon>
+		</HBox>
+		<HBox>
+			<Label></Label>
+		</HBox>
+		<HBox class="sapUiSizeCompact">
+			<CheckBox text="H&amp;M"></CheckBox>
+			<CheckBox text="Wal-mart"></CheckBox>
+			<CheckBox text="Gap"></CheckBox>
+			<CheckBox text="Lee"></CheckBox>
+			<CheckBox text="Old-N"></CheckBox>
+		</HBox>
+		<HBox>
+			<Label text="Max"></Label>
+		</HBox>
+		<HBox>
+			<Slider min="0" max="10" value="7" width="300px" />
+		</HBox>
+		<HBox>
+			<Label text="Max"></Label>
+		</HBox>
+		<HBox>
+			<Slider min="0" max="10" value="7" width="300px" />
+		</HBox>
+		<HBox>
+			<Button text="SIMULATION"></Button>
+		</HBox>
+	</VBox>
+
+
+	</VBox>
+</core:FragmentDefinition>

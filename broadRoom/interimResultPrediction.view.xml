@@ -1,0 +1,28 @@
+<core:View
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:d="sap.ui.commons"
+	xmlns:l="sap.ui.layout"
+	controllerName="broadRoom.interimResultPrediction"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page
+		class="page-container compact"
+		justifyContent="Center">
+		<headerContent>
+		</headerContent>
+
+		<content
+			class="wholte-page"
+			justifyContent="Center"
+			width="100%">
+		
+		</content>
+		<footer>
+		</footer>
+	</Page>
+
+
+</core:View>
+
+

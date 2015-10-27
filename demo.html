@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="http://localhost:8080/sapui5-sdk-dist/resources/sap-ui-cachebuster/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.ui.table, sap.ui.commons, sap.viz"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{"crystal": "./crystal/"}'
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		<link rel="stylesheet" href="css/crystal.css"></link>
+		
+		<script>
+			var sapById = sap.ui.getCore().byId;
+			sap.ui.localResources("util");
+			sap.ui.localResources("fragment");
+			var app = new sap.m.App('the-app', {initialPage:"idView"});
+
+	         var page = sap.ui.view({id:"idView", viewName:"crystal.ganttChart", type:sap.ui.core.mvc.ViewType.JS});
+			 app.addPage(page);
+			 app.placeAt('content');
+  
+		</script>
+		
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

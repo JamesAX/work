@@ -1,0 +1,93 @@
+label.show-year-month {
+    width: 100px;
+    max-width: 200%;
+}
+
+.sapUiTableColCell, .sapUiTableColRowHdrIco {
+	overflow: visible;
+}
+
+.sapUiTableCell {
+    padding: 0;
+    overflow: visible;
+}
+
+.gantt-cell {
+    width: 36px;
+    height: 40px;
+}
+
+.main-bar {
+    width: 40px;
+    height: 30px;
+    /*border-radius: 6px;*/
+}
+
+.first-bar {
+    width: 40px;
+    height: 20px;
+    /*border-radius: 6px;*/
+}
+
+.second-bar {
+	width: 40px;
+    height: 12px;
+    /*border-radius: 6px;*/
+}
+
+.bar-color-red {
+    background-color: red;
+}
+
+.bar-color-green {
+    background-color: green;
+}
+
+.bar-color-yellow {
+    background-color: yellow;
+}
+
+.target-border {
+	border-right: 4px solid coral;
+}
+
+.main-container-box {
+	height: 60px;
+}
+
+.first-container-box {
+	height: 40px;
+}
+
+.second-container-box {
+	height: 40px;
+}
+
+.target-gantt-cell {
+	width: 36px;
+}
+
+
+.sapUiTableColCell {
+    padding: 0;
+}
+
+div#table-box {
+    padding: 10px;
+}
+
+/*.header-box>div:nth-child(2) {
+    border-top: 1px solid gray;
+}*/
+
+#the-app {
+    overflow: scroll;
+}
+
+.size1 {
+  font-size : 1.5rem;
+}
+
+.size1 {
+    font-size : 1rem;
+  }
