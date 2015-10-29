@@ -142,7 +142,7 @@ sap.ui.jsview("crystal.ganttChart", {
       },
       valueAxis: {
         label: {
-          formatString: 'axisFormat'
+          formatString: ''
         },
         title: {
           visible: false
@@ -156,7 +156,7 @@ sap.ui.jsview("crystal.ganttChart", {
       plotArea: {
         dataLabel: {
           visible: true,
-          formatString: 'datalabelFormat',
+          formatString: '',
           style: {
             color: null
           }

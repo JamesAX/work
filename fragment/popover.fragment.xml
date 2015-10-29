@@ -1,0 +1,44 @@
+<core:FragmentDefinition xmlns="sap.suite.ui.commons" xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls">
+    <m:Popover title="{city} Factory" class="sapUiContentPadding" placement="Top" contentWidth="400px" contentHeight="250px">
+        <m:HBox height="140px">
+            <!-- <viz:VizFrame class="idVizFramePie" uiConfig="{applicationSet:'fiori'}" height="100%" width="100%"></viz:VizFrame>
+			<viz:VizFrame class="idVizFrameColumn" uiConfig="{applicationSet:'fiori'}" height="100%" width="100%"></viz:VizFrame> -->
+            <m:VBox width="50%">
+                <m:Label text="Fulfillment Rate" />
+                <HarveyBallMicroChart class="HBMC1" size="M" total="100" showTotal="false" showFractions="true">
+                    <items>
+                        <HarveyBallMicroChartItem fraction="89" fractionScale="%" color="skyblue"/>
+                    </items>
+                </HarveyBallMicroChart>
+            </m:VBox>
+            <m:VBox width="50%">
+                <m:Label text="Estimated Loss" />
+                <ColumnMicroChart class="CMC1" width="80px" height="100px" >
+                    <rightBottomLabel>
+                        <ColumnMicroChartLabel label="43.5K" color="Good" />
+                    </rightBottomLabel>
+                    <columns>
+                        <ColumnData value="-43.5" color="Good" />
+                    </columns>
+                </ColumnMicroChart>
+            </m:VBox>
+        </m:HBox>
+        <m:VBox class="notice-board">
+            <m:HBox>
+                <core:Icon src="sap-icon://alert" color="red" size="18px">
+                </core:Icon>
+                <m:Label class="notice-label" text="132 pieces material delayed" textAlign="Center" />
+            </m:HBox>
+            <m:HBox>
+                <core:Icon src="sap-icon://alert" color="red" size="18px">
+                </core:Icon>
+                <m:Label class="notice-label" text="25 production orders alert for delay" textAlign="Center" />
+            </m:HBox>
+            <m:HBox>
+                <core:Icon src="sap-icon://alert" color="orange" size="18px">
+                </core:Icon>
+                <m:Label class="notice-label" text="18 production orders warning for start" textAlign="Center" />
+            </m:HBox>
+        </m:VBox>
+    </m:Popover>
+</core:FragmentDefinition>

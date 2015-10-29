@@ -1,0 +1,60 @@
+#world-map {
+    margin: 50px;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+#idView--map-box path {
+    stroke: white;
+    stroke-width: 0.25px;
+    fill: grey;
+}
+
+
+.mapMarker {
+    visibility: hidden;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+}
+
+
+#idView--map-box {
+    border: 1px solid lightgrey;
+}
+
+#idView--vizFrameLine {
+    border: 10px solid lightgrey;
+}
+
+#idView--vizFrameBullet {
+    border: 10px solid lightgrey;
+}
+
+#idView--vizFrameScatter {
+    border: 10px solid lightgrey;
+}
+
+.notice-board {
+    border-top: 1px solid lightgray;
+    padding-top: 5px;
+}
+
+.notice-label {
+    margin-left: 15px;
+    font-size: 12px;
+    color:dodgerblue;
+}
+
+.suiteHBMCSBall {
+    fill: orange;
+}
+
+.suiteHBMCSgmnt.Neutral {
+    fill: #5cbae6;
+}
+
+.suiteHBMCValSclCnt>p, .suiteHBMCTtlSclCnt>p {
+    color: orange;
+}

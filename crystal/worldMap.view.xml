@@ -1,0 +1,80 @@
+<core:View 
+  controllerName="crystal.worldMap" 
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:l="sap.ui.layout"
+  xmlns:viz="sap.viz.ui5.controls"
+  xmlns:control="control"
+  xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+<Page 
+    showHeader="false">
+    <content>
+      <Bar>
+        <contentLeft>
+          <Image src="http://www.sap.com/global/images/SAPLogo.gif"></Image>
+          <Label  text="Intelligent Production Tracing and Planning System"></Label>
+        </contentLeft>
+        <contentRight>
+          <IconTabBar>
+            <items>
+              <IconTabFilter text="Welcome Jason Wang">
+              </IconTabFilter>
+              <IconTabSeparator  icon="sap-icon://vertical-grip"/>
+              <IconTabFilter text="Help">
+              </IconTabFilter>
+              <IconTabSeparator  icon="sap-icon://vertical-grip"/>
+              <IconTabFilter text="Log Out">
+              </IconTabFilter>
+            </items>
+          </IconTabBar>
+        </contentRight>
+      </Bar>
+
+      <IconTabBar id="noIconTabBar" expanded="{device>/isNoPhone}"
+        class="sapUiResponsiveContentPadding">
+        <items>
+          <IconTabFilter text="Real-time Overview">
+            <HBox
+              height="900px"
+              id="container-box">
+              <HBox width="70%" id="map-box">
+                  <control:worldMap></control:worldMap>
+              </HBox>
+              <VBox width="30%" id="chart-box">
+                <viz:VizFrame id="vizFrameLine" legendVisible="false" uiConfig="{applicationSet:'fiori'}"  height="280px" width="90%"></viz:VizFrame> 
+                <viz:VizFrame id="vizFrameBullet" legendVisible="false" uiConfig="{applicationSet:'fiori'}"  height="280px" width="90%"></viz:VizFrame> 
+                <viz:VizFrame id="vizFrameScatter" uiConfig="{applicationSet:'fiori'}" vizType="scatter" height="280px" width="90%"></viz:VizFrame>             
+              </VBox>
+            </HBox>
+          </IconTabFilter>
+          
+          <IconTabFilter text="Production Planning &amp; Tracking">
+            <mvc:JSView viewName="crystal.ganttChart"/>
+          </IconTabFilter>
+          
+          <IconTabFilter text="Labor Management">
+            <Text text="..." />
+          </IconTabFilter>
+          
+          <IconTabFilter text="Devices Maintenance">
+            <Text text="..." />
+          </IconTabFilter>
+          
+          <IconTabFilter text="Warehouse Management">
+            <Text text="..." />
+          </IconTabFilter>
+          
+          <IconTabFilter text="Material Tracing">
+            <Text text="..." />
+          </IconTabFilter>
+          
+        </items>
+      </IconTabBar>
+    </content>
+
+  </Page>
+
+
+</core:View>

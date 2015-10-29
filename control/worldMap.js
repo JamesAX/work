@@ -27,7 +27,7 @@ sap.ui.core.Control.extend("control.worldMap", {
     var parentId = this.getParent()
       .getId();
     var width = 1300;
-    height = 800;
+    height = 900;
     var projection = d3.geo.mercator()
       .scale(800)
       .translate([-900, 900])
@@ -51,11 +51,9 @@ sap.ui.core.Control.extend("control.worldMap", {
         //add circles and tooltips
         gEnter.append("a")
           .attr("xlink:href", '#')
-          .append(
-            "circle")
+          .append("circle")
           .attr("class", "circle")
-          .attr("cx", function(
-            d) {
+          .attr("cx", function(d) {
             return projection([d.lon, d.lat])[0];
           })
           .attr("cy", function(d) {
@@ -63,21 +61,23 @@ sap.ui.core.Control.extend("control.worldMap", {
           })
           .attr("r", 5)
           .style("stroke", "white")
-          .style("fill",
-            "pink")
-          .on("click", function() {
+          .style("fill","pink")
+          //add popover
+          .on("click", function(data) {
             var that = this;
+            //get city name to popover
+            var model = new sap.ui.model.json.JSONModel();
+            model.setData(data);
+
             var popover = sap.ui.xmlfragment("fragment.popover");
+            popover.setModel(model);
+            popover.bindElement("/");
             jQuery.sap.delayedCall(0, that, function () {
               popover.openBy(that);
             });
-            // return tooltip.style("visibility", "visible");
           })
           .on("mousemove", function() {
-            return tooltip.style("top", (d3.event.pageY -
-                height / 2.8) + "px")
-              .style("left", (d3.event.pageX -
-                width / 3.8) + "px");
+            return tooltip.style("top", (d3.event.pageY - height / 2.8) + "px").style("left", (d3.event.pageX - width / 3.8) + "px");
           })
           .on("mouseout", function() {
             return tooltip.style("visibility", "hidden");

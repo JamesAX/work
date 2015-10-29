@@ -1,4 +1,4 @@
-sap.ui.controller("broadRoom.interimResultPrediction", {
+sap.ui.controller("crystal.ganttChart", {
 
   /**
    * Called when a controller is instantiated and its View controls (if available) are already created.
