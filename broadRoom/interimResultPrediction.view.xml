@@ -1,28 +1,120 @@
-<core:View
-	xmlns:core="sap.ui.core"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	xmlns:d="sap.ui.commons"
-	xmlns:l="sap.ui.layout"
-	controllerName="broadRoom.interimResultPrediction"
+<core:View 
+	xmlns="sap.m" 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:d="sap.ui.commons" 
+    xmlns:c="sap.suite.ui.commons"
+    xmlns:viz="sap.viz.ui5.controls" 
+	xmlns:l="sap.ui.layout" 
+	controllerName="broadRoom.interimResultPrediction" 
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<Page
-		class="page-container compact"
-		justifyContent="Center">
-		<headerContent>
-		</headerContent>
-
-		<content
-			class="wholte-page"
-			justifyContent="Center"
-			width="100%">
-		
-		</content>
-		<footer>
-		</footer>
-	</Page>
-
-
+    <Toolbar id="headerBar" design="Transparent" height="3rem">
+        <ToolbarSpacer></ToolbarSpacer>
+        <Title id="headTitle" titleStyle="H2" text="Interim Result Prediction (H2/15)"  />
+        <ToolbarSpacer/>
+        <Button class="headerButton" icon="sap-icon://arrow-left" type="Transparent" />
+        <Button class="headerButton" icon="sap-icon://grid" type="Transparent"/>
+        <Button class="headerButton" icon="sap-icon://arrow-right" type="Transparent"/>
+        <Button class="headerButton" icon="sap-icon://full-screen" type="Transparent"/>
+    </Toolbar>
+    <l:Splitter id="main-container" height="100%">
+ 		<VBox id="left-box">
+    		<layoutData>
+    			<l:SplitterLayoutData size="300px" resizable="false"/>
+    		</layoutData>
+            <VBox id="timebox-container" height="200px">
+                <FlexBox id="logobox" height="100px">
+                    <Image id="sap-logo"
+                        src="http://events.sap.com/images/sap-logo-180x110.png"
+                        width="108px"
+                        height="66px">
+                    </Image> 
+                    <Label id="logo-label" text="S/4HANA" />
+                </FlexBox>
+                <HBox id="timebox"
+                    height="100px">
+                    <FlexBox id="TimeBox" width="50%">
+                        <Text text="{
+                            path:'/time',
+                            type:'sap.ui.model.type.DateTime',
+                            formatOptions:{
+                                pattern:'HH:mm',
+                                source: {
+                                pattern:'HH:mm:ss'
+                                }
+                            }
+                        }"/>
+                    </FlexBox>
+                    <FlexBox id="DateBox" width="50%">
+                        <Text text="{
+                            path:'/date',
+                            type:'sap.ui.model.type.Date',
+                            formatOptions:{
+                                style:'full'
+                            }
+                        }" />
+                    </FlexBox>
+                </HBox>
+            </VBox>
+            <VBox class="section" id="vision" height="300px">
+                <Toolbar class="sectionToolbar">
+                    <Title id="sectionTitle" titleStyle="H4" text="2020 Strategic Vision"  />
+                    <ToolbarSpacer/>
+                    <Button class="headerButton" icon="sap-icon://vertical-grip" type="Transparent" />
+                </Toolbar>
+                <Text class="feed" width="94%" text="26-28 bn EUR in Total Revenue"></Text>
+                <Text class="feed" text="7.5-8 bn EUR in Cloud Subscriptions and Support"></Text>
+                <Text class="feed" text="70-75% of Revenue from Cloud Subscriptions and Maintenance"></Text>
+                <Text class="feed" text="335kt CO2 Emission (reduce to Y2K level)"></Text>
+            </VBox>
+             <VBox class="section" id="news"  height="360px">
+                <Toolbar class="sectionToolbar">
+                    <Title id="newsTitle" titleStyle="H4" text="SAP Market News"  />
+                    <ToolbarSpacer/>
+                    <Button class="headerButton" icon="sap-icon://vertical-grip" type="Transparent" />
+                </Toolbar>
+                <Text class="feed" text="Newsbyte: SAP Unveils SAP Sports One Solution for Soccer"></Text>
+                <Text class="feed" text="KapAn GmbH: CLSA Cuts to Hold; Deal Rumors Round Stock at $75 to $86"></Text>
+                <Text class="feed" text="Naptun Inc. CEO: Race Against Mersat Ltd. And SAO for Omni-Channel Fueled $200 Million Stego Acquisition"></Text>
+                <Text class="feed" text="Kurrent: This Could Be Kurrent's Next Billion-Dollar Industry"></Text>
+            </VBox>
+		</VBox>
+		<VBox id="middle-box">
+    		<layoutData>
+    			<l:SplitterLayoutData size="970px" resizable="false"/>
+    		</layoutData>
+            <VBox class="section" height="360px">
+                <Toolbar class="sectionToolbar">
+                    <Title titleStyle="H4" text="Operating Revenue Growth"  />
+                    <ToolbarSpacer/>
+                    <Button class="headerButton" icon="sap-icon://vertical-grip" type="Transparent" />
+                </Toolbar>
+                <viz:VizFrame id="ORGchart" height="320px" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+            </VBox>
+            <HBox>
+                <VBox class="section" width="49%">
+                    <Toolbar class="sectionToolbar">
+                        <Title titleStyle="H4" text="Revenue Market Share"  />
+                        <ToolbarSpacer/>
+                        <Button class="headerButton" icon="sap-icon://vertical-grip" type="Transparent" />
+                    </Toolbar>
+                    <viz:VizFrame id="RMSchart" height="200px" width="100%" uiConfig="{applicationSet:'fiori'}"> </viz:VizFrame>
+                </VBox>
+                <VBox width="2%"></VBox>
+                <VBox class="section" width="49%">
+                    <Toolbar class="sectionToolbar">
+                        <Title titleStyle="H4" text="EBITDA Margin"  />
+                        <ToolbarSpacer/>
+                        <Button class="headerButton" icon="sap-icon://vertical-grip" type="Transparent" />
+                    </Toolbar>
+                    <viz:VizFrame id="EMchart" height="200px" width="100%" uiConfig="{applicationSet:'fiori'}"> </viz:VizFrame>
+                </VBox>
+            </HBox>
+    	</VBox>
+        <VBox id="right-box">
+            <layoutData>
+                <l:SplitterLayoutData size="auto" />
+            </layoutData>
+        </VBox>
+    </l:Splitter>
 </core:View>
-
-

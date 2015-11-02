@@ -1,0 +1,100 @@
+span, label {
+	color:snow;
+	text-shadow: none;
+	padding-left: 10px;
+}
+
+
+body{
+	font-family: Helvetica;
+}
+
+#idView{
+	background-color:#29758E;
+}
+
+#idView--headerBar {
+	border-top:5px solid #15384C;
+	border-bottom: none;
+}
+
+#idView--headTitle {
+	text-shadow: none;
+	top: 5px;
+}
+.sap-desktop .sapMBtnTransparent>.sapMBtnIcon {
+    color: white;
+}
+
+#idView--main-container {
+	top:20px;
+	margin-left: 20px;
+}
+
+#idView--timebox-container {
+	margin-right: 10px;
+}
+
+#idView--logobox {
+	background-color: rgba(0,0,0,0.1);
+}
+
+#idView--timebox {
+	background-color: rgba(0,0,0,0.5);
+	margin-bottom: 15px;
+}
+
+#idView--sap-logo {
+	margin-top: 18px;
+    margin-left: 100px;
+}
+
+#idView--logo-label {
+	color:white;
+	position: relative;
+    top: 63px;
+    right: 30px;
+}
+
+#idView--vision {
+	margin-right: 10px;
+}
+
+#idView--news {
+	margin-right: 10px;
+}
+
+
+#__text0 {
+	font-size: 2.5rem;
+    margin: 23px 0 0 10px;
+}
+
+#__text1 {
+    font-size: 1rem;
+    margin-top: 25px;
+    margin-left: -10px;
+}
+
+.section {
+	margin-bottom: 15px;
+	background-color: rgba(0,0,0,0.3);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.sectionToolbar {
+	background-color: rgba(0,0,0,0.3);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: none
+}
+
+.feed {
+    padding: 10px 5px 10px 10px;
+    margin: 8px 10px 0 10px;
+    border-left: 2px solid deepskyblue;
+    background-color: rgba(0,0,0,0.1);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
